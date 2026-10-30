@@ -1,0 +1,39 @@
+{
+  "n": 120,
+  "mean_reward": 0.9621317155594575,
+  "valid_json_rate": 1.0,
+  "qualification_accuracy": 0.6166666666666667,
+  "contacted": 31,
+  "wasted_sends_on_bad_fit": 6,
+  "expected_replies": 17.08792501031827,
+  "expected_meetings": 5.809977923249176,
+  "sampled_funnel": {
+    "Disqualified": 89,
+    "Contacted": 18,
+    "Replied": 4,
+    "Meeting Booked": 9
+  },
+  "reply_rate_on_good_fit": 0.6787170004127308,
+  "message_feature_rates": {
+    "has_cta": 0.0,
+    "has_subject": 0.88,
+    "hits_pain": 0.64,
+    "icp_fields_correct": 3.2,
+    "length_ok": 1.0,
+    "names_company": 1.0,
+    "names_contact": 1.0,
+    "right_channel": 0.64,
+    "spammy": 0.0,
+    "tier_correct": 0.36,
+    "tone_match": 0.4,
+    "too_long": 0.0,
+    "unsupported_claim": 0.04,
+    "uses_signal": 0.84,
+    "wrong_name": 0.0
+  },
+  "name": "val_ckpt50",
+  "adapter": "runs/grpo/final",
+  "scoring_backend": "local",
+  "generation_seconds": 77.6,
+  "scoring_seconds": 0.01
+}

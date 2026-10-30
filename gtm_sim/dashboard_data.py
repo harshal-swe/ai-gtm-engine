@@ -9,7 +9,7 @@ import pathlib
 
 R = pathlib.Path("results")
 OUT = R / "dash"
-TOTAL_STEPS = 50
+TOTAL_STEPS = 25
 
 EVAL_FIELDS = [
     ("qualification_accuracy", "Qualification accuracy", "pct", "up"),
@@ -30,6 +30,28 @@ def icp_accuracy(name):
         return None
     rows = [json.loads(l) for l in p.read_text().splitlines() if l.strip()]
     return sum(r["outcome"]["features"].get("icp_fields_correct", 0) for r in rows) / (5 * len(rows))
+
+
+TRAINED = "grpo-run3"  # Harbor job / GTM-Bench result name of the model we present as "trained"
+
+
+def harbor_stats(job):
+    """Mean reward, qualification accuracy and expected meetings over a Harbor job's graded trials."""
+    res = pathlib.Path(f"harbor/jobs/{job}/result.json")
+    if not res.exists() or not json.loads(res.read_text()).get("finished_at"):
+        return None  # only report finished jobs
+    rows = [json.loads(p.read_text()) for p in pathlib.Path(f"harbor/jobs/{job}").glob("*/verifier/rewards.json")]
+    if not rows:
+        return None
+    n = len(rows)
+    return {"n": n, "reward": sum(r["reward"] for r in rows) / n,
+            "qual": sum(r["decision_correct"] for r in rows) / n,
+            "meetings": sum(r["meeting_prob"] for r in rows)}
+
+
+def gtmbench(name):
+    p = R / f"gtmbench_icp_{name}.json"
+    return json.loads(p.read_text())["mean_overall"] if p.exists() else None
 
 
 def load(name):
@@ -62,6 +84,22 @@ def main():
                 funnel.append({"model": model, "stage": stage, "count": n})
     (OUT / "funnel.json").write_text(json.dumps(funnel, indent=1))
 
+    hb = {k: harbor_stats(k) for k in ("base", TRAINED, "oracle")}
+    pick = lambda k, f: hb[k][f] if hb[k] else None
+    bench = [
+        {"benchmark": "Harbor on Tenki (30 prospects)", "metric": "Mean simulator reward", "format": "num",
+         "base": pick("base", "reward"), "trained": pick(TRAINED, "reward"), "ceiling": pick("oracle", "reward")},
+        {"benchmark": "Harbor on Tenki (30 prospects)", "metric": "Qualification accuracy", "format": "pct",
+         "base": pick("base", "qual"), "trained": pick(TRAINED, "qual"), "ceiling": pick("oracle", "qual")},
+        {"benchmark": "Harbor on Tenki (30 prospects)", "metric": "Expected meetings booked", "format": "num",
+         "base": pick("base", "meetings"), "trained": pick(TRAINED, "meetings"), "ceiling": pick("oracle", "meetings")},
+        {"benchmark": "GTM-Bench ICP step (24 tasks)", "metric": "Judge score, 1 to 5", "format": "num",
+         "base": gtmbench("base"), "trained": gtmbench(TRAINED), "ceiling": 5.0},
+    ]
+    for b in bench:
+        b["id"] = b["benchmark"].split(" (")[0] + " / " + b["metric"]
+    (OUT / "bench.json").write_text(json.dumps(bench, indent=1))
+
     log = [json.loads(l) for l in (R / "train_log.jsonl").read_text().splitlines() if l.strip()] \
         if (R / "train_log.jsonl").exists() else []
     t0 = log[0]["time"] - float(log[0].get("step_time", 0)) if log else None
@@ -83,16 +121,19 @@ def main():
              else "Training" if step else "Starting training")
     # Work items for the team; state follows the run's phase.
     trained, evaluated = (pathlib.Path("runs/grpo/final/adapter_config.json").exists(), grpo is not None)
+    run3 = pathlib.Path("runs/grpo3/final/adapter_config.json").exists()
+    bench = pathlib.Path("logs/harbor_bench.out")
+    bench_done = bench.exists() and "BENCH_DONE" in bench.read_text()
     plan = [
-        ("GTM buyer simulator (products, prospects, personas, reward)", "done"),
-        ("Scoring runs in Tenki sandboxes", "done"),
-        ("Baseline eval of Qwen3-0.6B", "done" if base else "in progress"),
-        ("First GRPO run: messages improved, but it never disqualified a lead", "done"),
-        ("Added an ICP check step so the agent learns to skip bad-fit leads", "done"),
-        ("GRPO post-training on the Mac (50 steps, done by 2:30pm)", "done" if trained else "in progress"),
-        ("Eval of the trained model", "done" if evaluated else "in progress" if trained else "next"),
-        ("Export leads and drafts into RelayGTM's dashboard", "next"),
-        ("Add a before/after slide to the RelayGTM deck", "next"),
+        ("GTM buyer simulator, scored in Tenki sandboxes", "done"),
+        ("Run 1: messages improved, but the agent never disqualified a lead", "done"),
+        ("Run 2 (ICP check added): fewer wasted sends, but too cautious, fewer meetings", "done"),
+        ("Run 3: reward fix so skipping a good lead costs as much as the lost deal", "done" if run3 else "in progress"),
+        ("Eval of run 3 on the held-out prospects", "done" if evaluated and run3 else "in progress" if run3 else "next"),
+        ("Harbor benchmark on Tenki: oracle vs base vs trained, one VM per prospect",
+         "done" if harbor_stats(TRAINED) else "in progress"),
+        ("GTM-Bench ICP step: transfer check on real seller prompts", "done" if gtmbench(TRAINED) else "in progress"),
+        ("Results slide for the RelayGTM deck", "done"),
     ]
     (OUT / "plan.json").write_text(json.dumps([{"item": i, "state": st} for i, st in plan], indent=1))
 

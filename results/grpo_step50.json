@@ -1,0 +1,39 @@
+{
+  "n": 200,
+  "mean_reward": 0.8711798896820145,
+  "valid_json_rate": 1.0,
+  "qualification_accuracy": 0.605,
+  "contacted": 41,
+  "wasted_sends_on_bad_fit": 9,
+  "expected_replies": 22.32951986290264,
+  "expected_meetings": 7.518469105298813,
+  "sampled_funnel": {
+    "Disqualified": 159,
+    "Contacted": 21,
+    "Replied": 12,
+    "Meeting Booked": 8
+  },
+  "reply_rate_on_good_fit": 0.6921724957157075,
+  "message_feature_rates": {
+    "has_cta": 0.0,
+    "has_subject": 0.90625,
+    "hits_pain": 0.6875,
+    "icp_fields_correct": 3.15625,
+    "length_ok": 1.0,
+    "names_company": 1.0,
+    "names_contact": 1.0,
+    "right_channel": 0.6875,
+    "spammy": 0.0,
+    "tier_correct": 0.40625,
+    "tone_match": 0.3125,
+    "too_long": 0.0,
+    "unsupported_claim": 0.0,
+    "uses_signal": 0.8125,
+    "wrong_name": 0.0
+  },
+  "name": "grpo",
+  "adapter": "runs/grpo/final",
+  "scoring_backend": "tenki",
+  "generation_seconds": 169.3,
+  "scoring_seconds": 0.28
+}

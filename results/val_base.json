@@ -1,0 +1,39 @@
+{
+  "n": 120,
+  "mean_reward": 1.2835666813371487,
+  "valid_json_rate": 1.0,
+  "qualification_accuracy": 0.725,
+  "contacted": 60,
+  "wasted_sends_on_bad_fit": 14,
+  "expected_replies": 26.109193995859048,
+  "expected_meetings": 8.78480688436987,
+  "sampled_funnel": {
+    "Disqualified": 60,
+    "Contacted": 42,
+    "Replied": 6,
+    "Meeting Booked": 12
+  },
+  "reply_rate_on_good_fit": 0.5615042173012836,
+  "message_feature_rates": {
+    "has_cta": 0.0,
+    "has_subject": 0.9782608695652174,
+    "hits_pain": 0.782608695652174,
+    "icp_fields_correct": 4.173913043478261,
+    "length_ok": 1.0,
+    "names_company": 0.9565217391304348,
+    "names_contact": 0.5217391304347826,
+    "right_channel": 0.5217391304347826,
+    "spammy": 0.0,
+    "tier_correct": 0.6521739130434783,
+    "tone_match": 0.6086956521739131,
+    "too_long": 0.0,
+    "unsupported_claim": 0.10869565217391304,
+    "uses_signal": 0.5,
+    "wrong_name": 0.0
+  },
+  "name": "val_base",
+  "adapter": null,
+  "scoring_backend": "local",
+  "generation_seconds": 84.7,
+  "scoring_seconds": 0.01
+}

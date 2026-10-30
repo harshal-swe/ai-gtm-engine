@@ -4,4 +4,7 @@ __pycache__/
 *.pyc
 .env
 logs/
-results/
+results/*.jsonl
+results/dash/
+results/costs.json
+harbor/jobs/

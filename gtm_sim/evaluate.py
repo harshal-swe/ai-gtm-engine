@@ -82,9 +82,11 @@ def main():
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--backend", default="auto", choices=["auto", "local", "tenki"])
     ap.add_argument("--sandboxes", type=int, default=4)
+    ap.add_argument("--split", default="test", choices=["test", "val"],
+                    help="val = separate prospects for checkpoint selection, so the test set stays untouched")
     args = ap.parse_args()
 
-    episodes = env.make_split(args.n, env.EVAL_SEED)
+    episodes = env.make_split(args.n, env.EVAL_SEED if args.split == "test" else env.VAL_SEED)
     model, tok = load_policy(args.adapter)
     t0 = time.time()
     completions = generate(model, tok, episodes, args.batch_size)

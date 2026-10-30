@@ -1,0 +1,39 @@
+{
+  "n": 200,
+  "mean_reward": 0.9742633767028346,
+  "valid_json_rate": 1.0,
+  "qualification_accuracy": 0.585,
+  "contacted": 101,
+  "wasted_sends_on_bad_fit": 41,
+  "expected_replies": 33.508714058466374,
+  "expected_meetings": 10.837623611817078,
+  "sampled_funnel": {
+    "Disqualified": 99,
+    "Contacted": 68,
+    "Replied": 26,
+    "Meeting Booked": 7
+  },
+  "reply_rate_on_good_fit": 0.5448119009744395,
+  "message_feature_rates": {
+    "has_cta": 0.0,
+    "has_subject": 0.9666666666666667,
+    "hits_pain": 0.7666666666666667,
+    "icp_fields_correct": 4.133333333333334,
+    "length_ok": 0.9666666666666667,
+    "names_company": 0.95,
+    "names_contact": 0.6666666666666666,
+    "right_channel": 0.55,
+    "spammy": 0.016666666666666666,
+    "tier_correct": 0.5333333333333333,
+    "tone_match": 0.4666666666666667,
+    "too_long": 0.03333333333333333,
+    "unsupported_claim": 0.08333333333333333,
+    "uses_signal": 0.4666666666666667,
+    "wrong_name": 0.0
+  },
+  "name": "baseline",
+  "adapter": null,
+  "scoring_backend": "tenki",
+  "generation_seconds": 96.0,
+  "scoring_seconds": 0.25
+}

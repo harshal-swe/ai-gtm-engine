@@ -1,0 +1,330 @@
+{
+  "name": "grpo-run3",
+  "adapter": "runs/grpo3/final",
+  "n_tasks": 24,
+  "n_judged": 24,
+  "mean_overall": 1.5694444444444444,
+  "means": {
+    "icp_alignment": 1.625,
+    "buyer_account_specificity": 1.2083333333333333,
+    "commercial_relevance": 1.0,
+    "gtm_actionability": 1.0833333333333333,
+    "concision": 1.875,
+    "offer_separation": 2.625
+  },
+  "source": "GTM-Bench ICP judge rubric (pearlengine/GTM.Bench), tasks fetched at run time",
+  "per_task": [
+    {
+      "task_id": "Q001",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Roofing  \n- Company types: Independent Roofing Contractors  \n- Size: Small to Medium  \n- Geography: United States  \n- Maturity: Early to Mid  \n- Firmographic filters: No specific filters  \n\n## Target Personas  \n- Job titles: Roofing Contractor  \n- Departments: Operations, Marketing, Customer Service  \n- Seniority: Junior to Mid  \n- Responsibilities: Managing local SEO and Google Business Profile  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Local SEO optimization  \n  - Google Business Profile management  \n  - Domain presence in local directories  \n\n## Disqualification Criteria  \n- Signals that should exclude:  \n  - Inconsistent domain presence  \n  - Poor SEO performance  \n  - No active Google Business Profile  \n\n## Data Sources Used  \n- Public web: Local directories, Google My Business, Google Search Console  \n- Local files: Company websites, social media posts  \n- Optional user-owned adapter evidence: No specific evidence provided  \n\n## Scoring Rubric  \n- **Fit score**: 100 (High)  \n- **Evidence strength**: 80 (Moderate)  \n- **Contactability**: 70 (Moderate)  \n- **Risk**: 60 (Moderate)  \n\n## Assumptions  \n- The data sources used are standard and reliable.  \n- The scoring is based on the most relevant signals for inclusion."
+    },
+    {
+      "task_id": "Q006",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 1,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- **Industries**: Healthcare, Education, Technology, Real Estate  \n- **Company Types**: Insurance, Financial Services, Corporate  \n- **Size**: Medium to Large  \n- **Geography**: North America, Europe, Asia-Pacific  \n- **Maturity**: Recent (within 2 years)  \n- **Firmographic filters**: Company with a strong brand reputation and insurance experience  \n\n## Target Personas  \n- **Job titles**: Insurance Sales Representative, Claims Adjuster, Underwriter  \n- **Departments**: Sales, Claims, Operations  \n- **Seniority**: Mid- to Senior  \n- **Responsibilities**: Selling policies, managing claims, coordinating with underwriters  \n\n## Qualification Criteria  \n- **Must-have signals**:  \n  - Strong brand reputation  \n  - Experience in insurance sales  \n  - Active in claims management  \n  - Demonstrated ability to handle complex policy negotiations  \n  - Active on insurance platforms or social media  \n\n## Disqualification Criteria  \n- **Signals to exclude**:  \n  - No experience in insurance sales  \n  - No active account on insurance platforms  \n  - No history of policy disputes  \n  - No recent policy changes or updates  \n\n## Data Sources Used  \n- Public web: Insurance company websites, social media profiles, policy portals  \n- Local files: Company brochures, press releases, press kits  \n- Optional user-owned adapter evidence: If available, use user data from the customer's account  \n\n## Scoring Rubric  \n- **Fit Score**: 100 (Strong)  \n- **Evidence Strength**: 70 (Moderate)  \n- **Contactability**: 60 (Average)  \n- **Risk**: 30 (Low)  \n\n## Assumptions  \n- The company has a strong brand and insurance experience  \n- The individual has a history of successful policy sales  \n- The individual is active on insurance platforms or social media  \n\n### **Lead List**  \n1. **Company**: [Insurance Company Name]  \n   - **Domain**: [Insurance Company Website]  \n   - **Fit Score**: 100  \n   - **Fit Reason**: Strong brand reputation and experience in insurance sales  \n   - **Best Persona/Title**: Insurance Sales Representative  \n   - **Evidence Source**: [Insurance Company Website]  \n   - **Disqualification Risks**: No active account on insurance platforms  \n   - **Activation Recommendation**: Contact via email or phone  \n   - **Compliance Flags**: Verified insurance sales and active account  \n\n2. **Company**: [Another Insurance Company]  \n   - **Domain**: [Another Insurance Company Website]  \n   - **Fit Score**: 70  \n   - **Fit Reason**: Moderate evidence and contactability  \n   - **Best Persona/Title**: Claims Adjuster  \n   - **Evidence Source**: [Another Insurance Company Website]  \n   - **Disqualification Risks**: No active account on insurance platforms  \n   - **Activation Recommendation"
+    },
+    {
+      "task_id": "Q012",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 1,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Technology, Services  \n- Company types: Enterprise, Mid-market  \n- Size: Large, Medium  \n- Geography: United States, Europe  \n- Maturity: Early to Mid  \n- Firmographic filters: Bluevine.com  \n\n## Target Personas  \n- Job titles: IT Manager, Sales Manager  \n- Departments: Sales, Operations  \n- Seniority: Mid-level  \n- Responsibilities: Sales strategy, customer acquisition  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Website traffic (organic and paid)  \n  - Domain authority (A/B testing)  \n  - High engagement on the website  \n  - Positive feedback from past interactions  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect:  \n  - Low website traffic  \n  - Poor domain authority  \n  - Low engagement  \n  - Negative feedback from past interactions  \n\n## Data Sources Used  \n- Public web: Bluevine.com website  \n- Local files: Company website content  \n- Optional user-owned adapter evidence: No evidence provided  \n\n## Scoring Rubric  \n- How fit: 100-100  \n- Evidence strength: 50-100  \n- Contactability: 100-100  \n- Risk: 0-50  \n\n## Assumptions  \n- The company appears to sell enterprise-level software solutions.  \n- Bluevine.com is a well-known domain with strong traffic."
+    },
+    {
+      "task_id": "Q017",
+      "vertical": "Events, Hospitality & Media",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- **Industries**: Events, Tourism, Hospitality  \n- **Company Types**: Event Management, Catering, Travel Agencies  \n- **Size**: Medium to Large  \n- **Geography**: United States, Europe, Asia  \n- **Maturity**: Early to Mid  \n- **Firmographic filters**: ColorFactory Events  \n\n## Target Personas  \n- **Job titles**: Event Planner, Catering Manager, Travel Coordinator  \n- **Departments**: Marketing, Operations, Events  \n- **Seniority**: Mid to Senior  \n- **Responsibilities**: Event planning, catering coordination, travel marketing  \n\n## Qualification Criteria  \n- **Must-have signals**:  \n  - Website traffic from ColorFactory Events  \n  - Social media engagement (e.g., Facebook, Instagram)  \n  - Email sign-ups from ColorFactory Events  \n  - Reviews from ColorFactory Events  \n\n## Disqualification Criteria  \n- **Signals that should exclude a prospect**:  \n  - Unrelated to ColorFactory Events  \n  - No domain or website traffic  \n  - No social media engagement  \n  - No email sign-ups  \n\n## Data Sources Used  \n- Public web: ColorFactory Events website  \n- Local files: Company website, social media posts  \n- Optional user-owned adapter evidence: No evidence provided  \n\n## Scoring Rubric  \n- **Fit score**: 100 (highest) to 0 (lowest)  \n- **Evidence strength**: 100 (highest) to 0 (lowest)  \n- **Contactability**: 100 (highest) to 0 (lowest)  \n- **Risk**: 100 (highest) to 0 (lowest)  \n\n## Assumptions  \n- The company appears to sell event-related services and catering.  \n- The domain and website traffic are the primary indicators of relevance."
+    },
+    {
+      "task_id": "Q022",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Nutrition, Food & Beverage  \n- Company types: Retail, Specialty  \n- Size: Medium to large  \n- Geography: United States  \n- Maturity: Early to Mid  \n- Firmographic filters: No specific filters  \n\n## Target Personas  \n- Job titles: Nutrition Specialist, Foodie, Consumer  \n- Departments: Marketing, Sales, Operations  \n- Seniority: Mid to Senior  \n- Responsibilities: Promoting products, engaging customers, managing inventory  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Website traffic (organic and paid)  \n  - Social media engagement (Instagram, Facebook)  \n  - Reviews (positive)  \n  - Email sign-ups  \n\n## Disqualification Criteria  \n- Signals that should exclude:  \n  - Low website traffic  \n  - Negative social media engagement  \n  - Poor reviews  \n  - No email sign-ups  \n\n## Data Sources Used  \n- Public web: Website traffic, social media analytics, reviews  \n- Local files: Product images, customer testimonials  \n- Optional user-owned adapter evidence: No evidence provided  \n\n## Scoring Rubric  \n- **Fit Score**: 100 (highest)  \n- **Evidence Strength**: 70  \n- **Contactability**: 60  \n- **Risk**: 50  \n\n## Assumptions  \n- The company appears to sell premium nutritional candies.  \n- The target personas align with the company's core values."
+    },
+    {
+      "task_id": "Q028",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 1
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Roofing, HVAC, Plumbing, Remodeling  \n- Company Types: Local SEO & Website Redesign  \n- Size: Small to Medium  \n- Geography: Local  \n- Maturity: Early to Mid  \n- Firmographic filters: No specific filters  \n\n## Target Personas  \n- Job Titles: Marketing, SEO Specialist, Website Designer  \n- Departments: Digital Marketing, Content Strategy, Web Development  \n- Seniority: Mid to Senior  \n- Responsibilities: Creating high-quality content, optimizing website performance, and improving customer experience  \n\n## Qualification Criteria  \n- Must-have signals: Strong local SEO expertise, domain experience, and a proven track record of successful website redesigns.  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect: Poor domain experience, lack of SEO expertise, or failure to meet website redesign goals.  \n\n## Data Sources Used  \n- Public web: Local SEO directories, industry reports, and online directories  \n- Local files: Company websites, business cards, and social media profiles  \n- Optional user-owned adapter evidence: If available, use user data from the company\u2019s own website or social media.  \n\n## Scoring Rubric  \n- **Fit Score**: 10\u201320 (based on relevance to the target industry and qualifications)  \n- **Evidence Strength**: 10\u201320 (based on the quality and relevance of the evidence)  \n- **Contactability**: 10\u201320 (based on the prospect\u2019s ability to reach the service)  \n- **Risk**: 10\u201320 (based on the potential for disqualification)  \n\n## Assumptions  \n- The ICP is based on general knowledge of local SEO and website redesign services.  \n- No specific assumptions were made about the company\u2019s size, industry, or location."
+    },
+    {
+      "task_id": "Q035",
+      "vertical": "Recruiting & Talent",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 1,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- **Industries**: Engineering, IT, Sales, Marketing, HR, Finance, Education  \n- **Company Types**: Tech, Consulting, Consulting, Consulting, Consulting, Consulting, Consulting  \n- **Size**: Small to Medium  \n- **Geography**: United States, United Kingdom, Europe, Asia-Pacific  \n- **Maturity**: Early to Mid  \n- **Firmographic filters**: None  \n\n## Target Personas  \n- **Job Titles**: Engineering, IT, Recruitment, Staffing  \n- **Departments**: Engineering, IT, HR, Sales, Marketing  \n- **Seniority**: Mid to Senior  \n- **Responsibilities**: Hiring, recruitment, talent acquisition, talent development, talent management  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Experience in engineering or IT  \n  - Strong communication skills  \n  - Demonstrated ability to attract and retain top talent  \n  - Proven success in hiring and managing engineering/IT teams  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect:  \n  - No experience in engineering or IT  \n  - Poor communication skills  \n  - No proven success in hiring or managing engineering/IT teams  \n\n## Data Sources Used  \n- Public web: LinkedIn, Glassdoor, Indeed, Glassdoor, LinkedIn  \n- Local files: Company websites, employee profiles, recruitment reports  \n- Optional user-owned adapter evidence: LinkedIn, Glassdoor, LinkedIn  \n\n## Scoring Rubric  \n- **Fit**: 10\u201320 points (based on experience, communication, and success)  \n- **Evidence Strength**: 10\u201320 points (based on data and credibility)  \n- **Contactability**: 10\u201320 points (based on ease of contact)  \n- **Risk**: 10\u201320 points (based on potential disqualification risks)  \n\n## Assumptions  \n- The ICP is based on general assumptions about the industry and company needs."
+    },
+    {
+      "task_id": "Q041",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Wholesale distribution, retail growth services  \n- Company types: Food brands, farms, beverage companies, coffee importers  \n- Size: Small to medium  \n- Geography: All regions  \n- Maturity: Early to mid  \n- Firmographic filters: No specific filters  \n\n## Target Personas  \n- Job titles: Marketing, Sales, Operations  \n- Departments: Branding, Distribution, Retail  \n- Seniority: Mid to senior  \n- Responsibilities: Strategy development, lead generation, market analysis  \n\n## Qualification Criteria  \n- Must-have signals: Strong brand presence, clear value proposition, proven lead generation success, and a clear fit with the target industry.  \n\n## Disqualification Criteria  \n- Signals that should exclude: Low engagement, poor lead quality, lack of proven experience, or non-compliance with regulations.  \n\n## Data Sources Used  \n- Public web: Industry reports, market analysis tools, and competitor data  \n- Local files: Company websites, business cards, and social media profiles  \n- Optional user-owned adapter evidence: If available, include links or data from user-owned content  \n\n## Scoring Rubric  \n- **Fit score**: 1-5 (1 = very low, 5 = very high)  \n- **Evidence strength**: 1-5 (1 = very low, 5 = very high)  \n- **Contactability**: 1-5 (1 = very low, 5 = very high)  \n- **Risk**: 1-5 (1 = very low, 5 = very high)  \n\n## Assumptions  \n- The ICP is based on general industry trends and best practices."
+    },
+    {
+      "task_id": "Q044",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Small Business Finance, Retail, Manufacturing, Service  \n- Company types: Sole Proprietorships, Limited Liability Companies, Sole Proprietorships with a Business Name  \n- Size: Small to Medium  \n- Geography: United States  \n- Maturity: Early to Mid-Maturity  \n- Firmographic filters: Revenue range $1M-$50M  \n\n## Target Personas  \n- Job titles: Finance Manager, Business Owner, Small Business Owner  \n- Departments: Finance, Operations, Marketing  \n- Seniority: Mid to Senior  \n- Responsibilities: Managing working capital, equipment procurement, and financial planning  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - $1M-$50M revenue  \n  - Working capital or equipment financing  \n  - Demonstrated financial stability  \n  - Clear business objectives  \n\n## Disqualification Criteria  \n- Signals that should exclude:  \n  - No working capital or equipment financing  \n  - No clear business objectives  \n  - No financial stability  \n  - No evidence of working capital or equipment financing  \n\n## Data Sources Used  \n- Public web: Small Business Finance websites, Revenue reports, Business Owner directories  \n- Local files: Business owner directories, financial reports, business owner websites  \n- Optional user-owned adapter evidence: If available, use user-owned data sources  \n\n## Scoring Rubric  \n- **Fit Score**: 100-100 (highest)  \n- **Evidence Strength**: 70-80 (medium)  \n- **Contactability**: 50-60 (medium)  \n- **Risk**: 30-40 (lowest)  \n\n## Assumptions  \n- The data sources used are publicly available and reliable.  \n- The scoring is based on the most relevant and actionable criteria."
+    },
+    {
+      "task_id": "Q049",
+      "vertical": "Events, Hospitality & Media",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Event Management, Tourism, Hospitality  \n- Company types: Event Software Providers, Event Booking Platforms  \n- Size: Small to Medium  \n- Geography: Northwest Chicago suburbs  \n- Maturity: Early to Mid  \n- Firmographic filters: Location, industry, size, and maturity  \n\n## Target Personas  \n- Job titles: Event Manager, Event Coordinator, Event Planner  \n- Departments: Marketing, Operations, Event Planning  \n- Seniority: Mid to Senior  \n- Responsibilities: Event planning, booking, marketing, and customer support  \n\n## Qualification Criteria  \n- Must-have signals: Company experience, domain credibility, domain expertise, and proven track record.  \n\n## Disqualification Criteria  \n- Signals that should exclude: Inability to provide evidence, lack of domain expertise, or poor contactability.  \n\n## Data Sources Used  \n- Public web: Event booking platforms, hotel listings, and industry reports  \n- Local files: Hotel and event venue listings from local directories  \n- Optional user-owned adapter evidence: If available, from user data or internal records  \n\n## Scoring Rubric  \n- **Fit Score**: 100 (High) to 0 (Low)  \n- **Evidence Strength**: 100 (High) to 0 (Low)  \n- **Contactability**: 100 (High) to 0 (Low)  \n- **Risk**: 100 (High) to 0 (Low)  \n\n## Assumptions  \n- The company has a strong domain reputation and experience in event booking software.  \n- The prospect has a clear understanding of the software and its benefits."
+    },
+    {
+      "task_id": "Q056",
+      "vertical": "Sustainability & Energy",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 2,
+        "concision": 2,
+        "offer_separation": 4
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Renewable Energy  \n- Company Types: Renewable Energy Companies  \n- Size: 50\u2013500 employees  \n- Geography: United States  \n- Maturity: Early to Mid-Maturity  \n- Firmographic filters: None  \n\n## Target Personas  \n- Job Titles: Sustainability Analyst, Environmental Consultant, Renewable Energy Manager  \n- Departments: Sustainability, Energy, Environmental Planning  \n- Seniority: Mid- to Senior  \n- Responsibilities: Conducting sustainability reporting, analyzing energy efficiency, supporting ESG initiatives  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Company has a renewable energy portfolio  \n  - Demonstrated commitment to sustainability practices  \n  - Has a clear sustainability reporting framework  \n  - Has a history of successful ESG reporting  \n\n## Disqualification Criteria  \n- Signals that should exclude:  \n  - Lack of a sustainability reporting system  \n  - No ESG initiatives or reports  \n  - No compliance with relevant regulations  \n  - No evidence of sustainability reporting capabilities  \n\n## Data Sources Used  \n- Public web: Renewable Energy Companies, ESG reports, Sustainability Reports  \n- Local files: Company website, internal sustainability reports  \n- Optional user-owned adapter evidence: If available, e.g., internal compliance reports  \n\n## Scoring Rubric  \n- **Fit Score**: 1\u20135 (1 = Very Fit, 5 = Very Disqualified)  \n- **Evidence Strength**: 1\u20135 (1 = Very Weak, 5 = Strong Evidence)  \n- **Contactability**: 1\u20135 (1 = Very Low, 5 = Very High)  \n- **Risk**: 1\u20135 (1 = Very Low, 5 = Very High)  \n\n## Assumptions  \n- The company has a renewable energy portfolio and is actively engaged in sustainability reporting.  \n- The company has a clear ESG strategy and compliance framework."
+    },
+    {
+      "task_id": "Q061",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Roofing, HVAC, Plumbing, Remodeling  \n- Company types: Local companies  \n- Size: Small to medium  \n- Geography: United States  \n- Maturity: Early to mid  \n- Firmographic filters: Company domain, location, and industry  \n\n## Target Personas  \n- Job titles: Marketing Manager, Sales Manager, Lead Designer, Website Strategist  \n- Departments: Marketing, Sales, Sales Operations, Design  \n- Seniority: Mid-level to senior  \n- Responsibilities: Driving local SEO campaigns, managing website redesigns, and building lead pipelines  \n\n## Qualification Criteria  \n- Must-have signals: Local SEO expertise, website redesign experience, proven lead generation, and a clear understanding of local market trends.  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect: Lack of experience, poor communication, or inability to meet the criteria.  \n\n## Data Sources Used  \n- Public web: Local business listings, SEO directories, and company websites  \n- Local files: Company directories, social media, and customer testimonials  \n- Optional user-owned adapter evidence: LinkedIn profiles, email sign-ups, or website visits  \n\n## Scoring Rubric  \n- How fit: 10\u201320 points  \n- Evidence strength: 20\u201330 points  \n- Contactability: 10\u201320 points  \n- Risk: 10\u201320 points  \n\n## Assumptions  \n- The prospect has a proven track record in local SEO and website redesign.  \n- The company domain is relevant and has a strong presence in the local market."
+    },
+    {
+      "task_id": "Q069",
+      "vertical": "Public Sector",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Capital planning and workflow software  \n- Company types: Municipalities, counties, and public agencies  \n- Size: Small to medium-sized businesses  \n- Geography: United States  \n- Maturity: Early to mid-career  \n- Firmographic filters: Company domain, LinkedIn, and email  \n\n## Target Personas  \n- Job titles: City Manager, Public Works Director, and Planning Director  \n- Departments: Planning, Operations, and Administration  \n- Seniority: Mid-level to senior  \n- Responsibilities: Managing capital planning initiatives, streamlining workflows, and coordinating with local government departments  \n\n## Qualification Criteria  \n- Must-have signals: Strong experience in capital planning, familiarity with workflow tools, and a proven track record of successful implementation  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect: Lack of experience, poor communication, or inability to demonstrate value  \n\n## Data Sources Used  \n- Public web: LinkedIn, company websites, and government portals  \n- Local files: Municipal and county records, public reports, and internal documentation  \n- Optional user-owned adapter evidence: If available, include LinkedIn profiles or emails  \n\n## Scoring Rubric  \n- How fit: 10 points (evidence of fit and experience)  \n- Evidence strength: 10 points (strong evidence of fit and experience)  \n- Contactability: 10 points (personalized opening line)  \n- Risk: 10 points (risk assessment)  \n\n## Assumptions  \n- The prospect has a strong understanding of capital planning and workflow tools  \n- The prospect has a history of successful implementation in similar sectors  \n- The prospect is likely to be a strategic partner for the organization"
+    },
+    {
+      "task_id": "Q073",
+      "vertical": "Sustainability & Energy",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Solar, Renewables, Waste, Sustainability  \n- Company types: Private, Public  \n- Size: Small to Medium  \n- Geography: United States  \n- Maturity: Early to Mid  \n- Firmographic filters: Company domain, LinkedIn, Email  \n\n## Target Personas  \n- **Job titles**: Facilities Director, Sustainability Manager, Energy Efficiency Specialist  \n- **Departments**: Facilities, Sustainability, Energy Efficiency  \n- **Seniority**: Mid to Senior  \n- **Responsibilities**: Managing energy efficiency initiatives, ensuring sustainability reporting, coordinating with stakeholders  \n\n## Qualification Criteria  \n- **Must-have signals**:  \n  - LinkedIn profile with relevant experience in energy efficiency and sustainability.  \n  - Evidence of fit (e.g., past projects, partnerships, or certifications related to sustainability).  \n  - Personalized opening line (e.g., \"Looking to optimize your energy efficiency and sustainability reporting? Let's discuss how we can help!\")  \n\n## Disqualification Criteria  \n- **Signals that should exclude a prospect**:  \n  - No LinkedIn profile or email provided.  \n  - No evidence of fit or experience.  \n  - No personal opening line.  \n\n## Data Sources Used  \n- Public web (LinkedIn, company websites, industry reports)  \n- Local files (company documents, employee records)  \n- Optional user-owned adapter evidence (if available)  \n\n## Scoring Rubric  \n- **Fit**: 30%  \n- **Evidence Strength**: 25%  \n- **Contactability**: 20%  \n- **Risk**: 15%  \n\n## Assumptions  \n- The prospect has a strong background in energy efficiency and sustainability.  \n- The company has a clear focus on sustainability reporting and energy efficiency."
+    },
+    {
+      "task_id": "Q077",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Real estate, construction, and hospitality  \n- Company types: Roofing contractors, local businesses, and residential providers  \n- Size: Small to medium-sized enterprises (SMEs)  \n- Geography: Urban and suburban areas  \n- Maturity: Early to mid-market  \n- Firmographic filters: Location, industry, and size  \n\n## Target Personas  \n- Job titles: Roofing contractor, local business owner, and residential installer  \n- Departments: Operations, Marketing, and Sales  \n- Seniority: Mid-level to senior roles  \n- Responsibilities: Managing roofing services, optimizing local SEO, and driving web design engagement  \n\n## Qualification Criteria  \n- Must-have signals: High-quality web design content, local SEO optimization tools, and strong customer reviews  \n- Disqualification criteria: Low-quality content, poor recency, lack of relevance, or negative feedback  \n\n## Data Sources Used  \n- Public web: Online directories, social media, and business listings  \n- Local files: Local business directories, property listings, and event records  \n- Optional user-owned adapter evidence: If available, user-generated content or testimonials  \n\n## Scoring Rubric  \n- **Fit**: 30%  \n- **Evidence strength**: 40%  \n- **Contactability**: 20%  \n- **Risk**: 10%  \n\n## Assumptions  \n- The data sources used are representative of the target market.  \n- The scoring is based on the likelihood of the prospect being interested in both web design and local SEO services."
+    },
+    {
+      "task_id": "Q082",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: E-commerce, Retail, Online Services  \n- Company Types: E-commerce, Online Store, Digital Marketing  \n- Size: Small to Medium  \n- Geography: United States, Europe, Asia-Pacific  \n- Maturity: Early to Mid  \n- Firmographic filters: E-commerce, Online Store, Digital Marketing  \n\n## Target Personas  \n- Job Titles: Marketing Manager, E-commerce Specialist, Digital Marketing Lead  \n- Departments: Sales, Marketing, Customer Experience  \n- Seniority: Mid to Senior  \n- Responsibilities: Driving product launches, optimizing conversion rates, improving customer engagement  \n\n## Qualification Criteria  \n- Must-have signals: Recent product launches, increased ad spend, improved conversion rates, enhanced customer feedback, and increased brand awareness.  \n\n## Disqualification Criteria  \n- Signals that indicate low conversion potential, poor ad spend, low engagement, or negative feedback.  \n\n## Data Sources Used  \n- Public web: E-commerce platforms, social media, Google Analytics, and SEM tools.  \n- Local files: Company websites, product catalogs, and customer reviews.  \n- Optional user-owned adapter evidence: If applicable, data from user-owned content or social media.  \n\n## Scoring Rubric  \n- **Fit**: 30% (relevance to the qualification criteria)  \n- **Evidence Strength**: 40% (quality and relevance of the signal)  \n- **Contactability**: 20% (likelihood of reaching the prospect)  \n- **Risk**: 10% (potential for negative impact)  \n\n## Assumptions  \n- The data sources used are the most relevant and up-to-date for the target audience.  \n- The scoring is based on the most relevant and actionable signals for conversion optimization."
+    },
+    {
+      "task_id": "Q088",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: E-commerce, retail, services  \n- Company types: Shopify Store, Shopify Business, Shopify Enterprise  \n- Size: Small to Medium  \n- Geography: United States, Canada, Europe  \n- Maturity: Early to Mid  \n- Firmographic filters: Store ID, Store Name, URL  \n\n## Target Personas  \n- Job titles: Business Owner, Store Manager, E-commerce Specialist  \n- Departments: Marketing, Operations, Customer Experience  \n- Seniority: Mid to Senior  \n- Responsibilities: Managing SEO, Paid Ads, Technology Implementation  \n\n## Qualification Criteria  \n- Must-have signals: Strong SEO fundamentals, Paid Media Spend, Technology Evidence, URL Source, Confidence, and Reasonable Fit  \n\n## Disqualification Criteria  \n- Signals that should exclude: Low SEO, No Paid Media, No Technology Evidence, Low Confidence, or Disqualifying Reasoning  \n\n## Data Sources Used  \n- Public web: Shopify Store SEO reports, Paid Ads data, and URL analytics  \n- Local files: Store owner\u2019s website, internal data, and user-owned adapter evidence (optional)  \n\n## Scoring Rubric  \n- **Fit Score**: 100\u2013100 (Strong)  \n- **Evidence Strength**: 70\u201370 (Moderate)  \n- **Contactability**: 50\u201350 (Moderate)  \n- **Risk**: 30\u201330 (Moderate)  \n\n## Assumptions  \n- Shopify stores with weak SEO and low paid media spend are likely to be excluded due to lack of ROI.  \n- Technology evidence (e.g., SEO tools, analytics dashboards) is critical for inclusion.  \n- The URL source and confidence level directly impact the fit score."
+    },
+    {
+      "task_id": "Q093",
+      "vertical": "Recruiting & Talent",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 2,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Engineering, Technology, IT  \n- Company types: Private, Public, Government  \n- Size: Mid-sized to large  \n- Geography: United States, Europe, Asia-Pacific  \n- Maturity: Early to mid-market  \n- Firmographic filters: Greenhouse, Lever  \n\n## Target Personas  \n- Job titles: Engineering Analyst, Software Engineer, DevOps Engineer  \n- Departments: Technology, Product Management, Engineering  \n- Seniority: Junior to Senior  \n- Responsibilities: Designing solutions, collaborating with cross-functional teams, managing technical resources  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Open engineering roles with a strong focus on technology  \n  - Demonstrated interest in Greenhouse or Lever platforms  \n  - Evidence of successful project outcomes using Greenhouse or Lever  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect:  \n  - Lack of clear technical expertise  \n  - No mention of Greenhouse or Lever in the application  \n  - No evidence of prior experience with the platform  \n\n## Data Sources Used  \n- Public web: Greenhouse and Lever websites, LinkedIn, GitHub  \n- Local files: Company websites, employee profiles, internal documentation  \n- Optional user-owned adapter evidence: LinkedIn profile links for Greenhouse or Lever  \n\n## Scoring Rubric  \n- How fit: 100 points  \n- Evidence strength: 50 points  \n- Contactability: 30 points  \n- Risk: 20 points  \n\n## Assumptions  \n- Greenhouse and Lever are the primary platforms for engineering roles  \n- Open engineering roles are a strong indicator of interest in the platform  \n- The technology used (e.g., cloud, DevOps, AI) is a key factor in determining the need for the platform"
+    },
+    {
+      "task_id": "Q098",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Commercial Funding, Investment Banking, Financial Services  \n- Company types: Broker, Funding Agency, Compliance Officer  \n- Size: Medium to large  \n- Geography: United States, Europe, Asia-Pacific  \n- Maturity: Recent (within 1 year)  \n- Firmographic filters: Established, with a strong financial presence  \n\n## Target Personas  \n- Job titles: Investment Banking Lead, Compliance Officer, Funding Agency Manager  \n- Departments: Financial Planning, Compliance, Operations  \n- Seniority: Mid- to Senior  \n- Responsibilities: Managing compliance, facilitating funding operations, ensuring regulatory adherence  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Strong financial expertise  \n  - Proven compliance experience  \n  - Active CRM and compliance operations usage  \n  - Positive feedback from Lendio, National Business Capital, and Fora Financial  \n\n## Disqualification Criteria  \n- Signals that should exclude:  \n  - Inability to meet compliance standards  \n  - Poor CRM integration  \n  - Lack of active lead generation  \n  - Negative feedback from competitors  \n\n## Data Sources Used  \n- Public web: Lendio, National Business Capital, Fora Financial  \n- Local files: Company profiles, compliance reports  \n- Optional user-owned adapter evidence: CRM data from Lendio  \n\n## Scoring Rubric  \n- **Fit Score**: 100\u2013100 (highest)  \n- **Evidence Strength**: 70\u201380  \n- **Contactability**: 50\u201360  \n- **Risk**: 30\u201340  \n\n## Assumptions  \n- Lendio, National Business Capital, and Fora Financial are the most relevant data sources.  \n- The CRM and compliance operations support are the primary selling points."
+    },
+    {
+      "task_id": "Q105",
+      "vertical": "Sustainability & Energy",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- **Industries**: Energy, Manufacturing, Construction, and Utilities  \n- **Company Types**: Sustainability Reporting, Energy Efficiency Services  \n- **Size**: Medium to Large  \n- **Geography**: North America, Europe, and Asia-Pacific  \n- **Maturity**: Early to Mid  \n- **Firmographic filters**: Company with a focus on sustainability and energy efficiency  \n\n## Target Personas  \n- **Job Titles**: Sustainability Analyst, Energy Efficiency Consultant, Energy Auditor  \n- **Departments**: Sustainability, Energy Management, Environmental Compliance  \n- **Seniority**: Mid to Senior  \n- **Responsibilities**: Analyzing energy consumption, developing sustainability reports, and ensuring compliance with regulatory standards  \n\n## Qualification Criteria  \n- **Must-have signals**:  \n  - Strong evidence of past sustainability or energy efficiency initiatives  \n  - Demonstrated understanding of regulatory requirements  \n  - Positive feedback from previous clients  \n  - Active engagement with the company\u2019s sustainability reporting platform  \n\n## Disqualification Criteria  \n- **Signals that should exclude a prospect**:  \n  - No history of sustainability or energy efficiency work  \n  - No engagement with the company\u2019s reporting platform  \n  - No compliance with regulatory standards  \n  - No evidence of past success in sustainability or energy efficiency  \n\n## Data Sources Used  \n- Public web sources for company profiles and reports  \n- Local files for company documents and compliance records  \n- Optional user-owned adapter evidence for internal data (if applicable)  \n\n## Scoring Rubric  \n- **Fit Score**: 10\u2013100 (based on evidence strength, engagement, and compliance)  \n- **Evidence Strength**: 1\u201310 (based on the quality and relevance of the evidence)  \n- **Contactability**: 1\u201310 (based on ease of reaching the prospect)  \n- **Risk**: 1\u201310 (based on the potential for disqualification)  \n\n## Assumptions  \n- The prospect has a history of engagement with the company\u2019s sustainability reporting platform  \n- The company has a focus on energy efficiency and sustainability  \n- The prospect is likely to be a mid-to-senior professional in a relevant industry"
+    },
+    {
+      "task_id": "Q110",
+      "vertical": "Cybersecurity & IT",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Cybersecurity, Cloud Migration  \n- Company Types: SaaS, IT-heavy companies  \n- Size: Enterprise-level (\u226550 employees)  \n- Geography: United States  \n- Maturity: Advanced (\u22653 years)  \n- Firmographic filters: Company name, domain, and industry  \n\n## Target Personas  \n- Job Titles: CTO, CISO, IT Manager  \n- Departments: Technology, Operations, Security  \n- Seniority: Mid- to senior-level  \n- Responsibilities: Strategic planning, cloud migration, cybersecurity implementation  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - Clear ICP (Incentive, Cost, and Payment)  \n  - Evidence of intent to purchase  \n  - Contactable CTO, CISO, or IT Manager  \n  - Compliance flags (e.g., regulatory certifications)  \n\n## Disqualification Criteria  \n- Signals that indicate low intent or poor contactability  \n- Evidence that does not meet the criteria for inclusion  \n\n## Data Sources Used  \n- Public web (e.g., LinkedIn, Glassdoor, Crunchbase)  \n- Local directories (e.g., Google, Bing)  \n- Optional user-owned adapter evidence (e.g., internal CRM data)  \n\n## Scoring Rubric  \n- **Fit Score**: 10\u201320 (based on ICP, intent, and contactability)  \n- **Evidence Strength**: 10\u201320 (based on the quality and relevance of evidence)  \n- **Contactability**: 10\u201320 (based on the availability of the contact)  \n- **Risk**: 10\u201320 (based on the potential for conflict or compliance issues)  \n\n## Assumptions  \n- The ICP is based on standard SaaS and IT-heavy company structures.  \n- The CTO, CISO, and IT Manager are the primary decision-makers."
+    },
+    {
+      "task_id": "Q114",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 4
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: E-commerce, Consumer Products  \n- Company Types: Shopify Brand, E-commerce Company  \n- Size: Small to Medium  \n- Geography: United States  \n- Maturity: Early to Mid  \n- Firmographic filters: Shopify domain, e-commerce platform  \n\n## Target Personas  \n- Job titles: Founder, Ecommerce Manager, Growth Lead  \n- Departments: Marketing, Operations, Sales  \n- Seniority: Mid to Senior  \n- Responsibilities: Content creation, campaign optimization, lead generation  \n\n## Qualification Criteria  \n- Must-have signals: Intent to purchase, Conversion rate, Lead generation, Engagement metrics, and Email sign-up  \n\n## Disqualification Criteria  \n- Signals that should exclude: Low engagement, low conversion, poor lead quality, or non-existent email sign-up  \n\n## Data Sources Used  \n- Public web, local files, and optional user-owned adapter evidence  \n\n## Scoring Rubric  \n- Fit score: 1-10  \n- Evidence strength: 1-10  \n- Contactability: 1-10  \n- Risk: 1-10  \n\n## Assumptions  \n- The prompt did not specify enough detail about the specific criteria for inclusion or exclusion."
+    },
+    {
+      "task_id": "Q119",
+      "vertical": "Events, Hospitality & Media",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 4
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- **Podcasts**: All podcasts with a 10+ episode count, hosted by creators, and with a strong audience base.  \n- **Creators**: Creators with a 10+ episode count, who have a consistent audience growth rate of 15% or higher.  \n- **Media Brands**: Media brands with a 10+ episode count, and a strong presence in the US market.  \n- **Sports Organizations**: Sports organizations with a 10+ episode count, and a consistent audience growth rate of 10% or higher.  \n\n## Target Personas  \n- **Podcast Host**: A mid-level podcast host with a 10+ episode count, who has a strong audience and a history of consistent content.  \n- **Creator**: A senior creator with a 10+ episode count, who has a strong audience and a history of consistent content.  \n- **Media Brand**: A media brand with a 10+ episode count, and a strong presence in the US market.  \n- **Sports Organization**: A sports organization with a 10+ episode count, and a consistent audience growth rate of 10% or higher.  \n\n## Qualification Criteria  \n- Must-have signals:  \n  - 10+ episode count  \n  - Consistent audience growth rate of 15% or higher  \n  - Strong brand presence in the US market  \n  - Consistent content quality and variety  \n\n## Disqualification Criteria  \n- Signals that should exclude a prospect:  \n  - Less than 10+ episode count  \n  - Audience growth rate below 15%  \n  - Brand presence in the US market is low  \n  - Content quality and variety are low  \n\n## Data Sources Used  \n- Public web: Podcasts, creators, media brands, and sports organizations.  \n- Local files: Internal data from the company's database.  \n- Optional user-owned adapter evidence: If available, include evidence from the user's personal data.  \n\n## Scoring Rubric  \n- **Fit Score**: 100-100 (highest score)  \n- **Evidence Strength**: 100-100 (highest score)  \n- **Contactability**: 100-100 (highest score)  \n- **Risk**: 100-100 (highest score)  \n\n## Assumptions  \n- The ICP is based on the assumption that the target accounts are likely to have a strong audience and consistent content quality.  \n- The scoring rubric is based on the assumption that the data sources are reliable and up-to-date."
+    },
+    {
+      "task_id": "Q126",
+      "vertical": "Healthcare & Wellness",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      },
+      "icp": "# ICP\n\n## Target Accounts  \n- Industries: Healthcare, Technology, and Retail  \n- Company types: Enterprise, Mid-market, and Small Business  \n- Size: 5\u201350 employees  \n- Geography: California  \n- Maturity: Early to Mid  \n- Firmographic filters: Company name, location, and industry  \n\n## Target Personas  \n- Job titles: Senior Manager, Director, and Operations Manager  \n- Departments: Marketing, Sales, and Operations  \n- Seniority: Mid-level to Senior  \n- Responsibilities: Revenue generation, customer acquisition, and operational efficiency  \n\n## Qualification Criteria  \n- Missed-call or booking-friction signals  \n- 5\u201350 employees  \n- Decision makers responsible for revenue or operations  \n\n## Disqualification Criteria  \n- Signals that indicate low conversion potential  \n- Lack of relevant experience or expertise  \n- Inability to meet the criteria for inclusion  \n\n## Data Sources Used  \n- Public web sources (e.g., Google, LinkedIn, and industry reports)  \n- Local business directories and online directories  \n- Optional user-owned adapter evidence (e.g., social media posts, CRM data)  \n\n## Scoring Rubric  \n- **Fit Score**: 1\u20135 (1 = highest fit, 5 = lowest fit)  \n- **Evidence Strength**: 1\u20135 (1 = lowest evidence, 5 = highest evidence)  \n- **Contactability**: 1\u20135 (1 = lowest contactability, 5 = highest contactability)  \n- **Risk**: 1\u20135 (1 = lowest risk, 5 = highest risk)  \n\n## Assumptions  \n- The data sources used are representative of the target audience.  \n- The criteria for inclusion are based on the most relevant signals."
+    }
+  ]
+}

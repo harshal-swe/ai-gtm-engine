@@ -1,0 +1,39 @@
+{
+  "n": 120,
+  "mean_reward": 0.779006434159715,
+  "valid_json_rate": 1.0,
+  "qualification_accuracy": 0.6083333333333333,
+  "contacted": 20,
+  "wasted_sends_on_bad_fit": 1,
+  "expected_replies": 12.62800968132466,
+  "expected_meetings": 4.532376368258239,
+  "sampled_funnel": {
+    "Disqualified": 100,
+    "Contacted": 7,
+    "Replied": 9,
+    "Meeting Booked": 4
+  },
+  "reply_rate_on_good_fit": 0.6635794569118242,
+  "message_feature_rates": {
+    "has_cta": 0.05263157894736842,
+    "has_subject": 0.8947368421052632,
+    "hits_pain": 0.631578947368421,
+    "icp_fields_correct": 3.263157894736842,
+    "length_ok": 1.0,
+    "names_company": 1.0,
+    "names_contact": 1.0,
+    "right_channel": 0.631578947368421,
+    "spammy": 0.0,
+    "tier_correct": 0.5263157894736842,
+    "tone_match": 0.3157894736842105,
+    "too_long": 0.0,
+    "unsupported_claim": 0.05263157894736842,
+    "uses_signal": 0.8421052631578947,
+    "wrong_name": 0.0
+  },
+  "name": "val_ckpt40",
+  "adapter": "runs/grpo/checkpoint-40",
+  "scoring_backend": "local",
+  "generation_seconds": 129.1,
+  "scoring_seconds": 0.01
+}

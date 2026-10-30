@@ -245,7 +245,7 @@ def make_split(n: int, start_seed: int) -> list[Episode]:
     return [make_episode(start_seed + i) for i in range(n)]
 
 
-TRAIN_SEED, EVAL_SEED = 0, 1_000_000  # disjoint seed ranges => held-out prospects
+TRAIN_SEED, EVAL_SEED, VAL_SEED = 0, 1_000_000, 2_000_000  # disjoint seed ranges => held-out prospects
 
 
 # --------------------------------------------------------------------------- #
@@ -342,8 +342,9 @@ def score(ep: Episode, text: str) -> Outcome:
     icp_ok = icp_check_score(ep, a)
     icp_r = 0.1 * icp_ok
     if a["decision"] == "disqualify":
-        # Correctly skipping a bad lead saves rep time; skipping a good one loses the deal.
-        r = 0.6 if not good else -0.2
+        # Correctly skipping a bad lead saves rep time; skipping a good one loses the deal, which
+        # must cost about as much as a typical good pursuit earns, or skipping becomes the safe bet.
+        r = 0.6 if not good else -1.0
         return Outcome(True, not good, 0.0, 0.0, r + icp_r, {"disqualified": 1, "icp_fields_correct": icp_ok})
     if not good:
         # Spamming an off-ICP / negative-signal prospect: wasted send + domain-reputation hit.

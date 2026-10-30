@@ -44,10 +44,13 @@ def main():
     ap.add_argument("--lr", type=float, default=5e-5)
     ap.add_argument("--backend", default="auto", choices=["auto", "local", "tenki"])
     ap.add_argument("--out", default="runs/grpo")
+    ap.add_argument("--init-adapter", default=None, help="continue training from a saved LoRA adapter")
     args = ap.parse_args()
 
     episodes = env.make_split(args.n_train, env.TRAIN_SEED)
     ds = Dataset.from_list([{"prompt": env.messages(ep), "seed": ep.seed} for ep in episodes])
+    if args.init_adapter:  # don't replay the prompts the warm-start checkpoint already trained on
+        ds = ds.shuffle(seed=1)
 
     scorer = Scorer(args.backend, n_sandboxes=1)
 
@@ -78,7 +81,14 @@ def main():
     )
     lora = LoraConfig(r=16, lora_alpha=32, lora_dropout=0.0, task_type="CAUSAL_LM",
                       target_modules=["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"])
-    trainer = GRPOTrainer(model=BASE_MODEL, reward_funcs=gtm_reward, args=cfg, train_dataset=ds, peft_config=lora,
+    model, peft_config = BASE_MODEL, lora
+    if args.init_adapter:
+        import torch
+        from peft import PeftModel
+        from transformers import AutoModelForCausalLM
+        base = AutoModelForCausalLM.from_pretrained(BASE_MODEL, dtype=torch.bfloat16)
+        model, peft_config = PeftModel.from_pretrained(base, args.init_adapter, is_trainable=True), None
+    trainer = GRPOTrainer(model=model, reward_funcs=gtm_reward, args=cfg, train_dataset=ds, peft_config=peft_config,
                           callbacks=[JsonlLogger()])
     try:
         trainer.train()

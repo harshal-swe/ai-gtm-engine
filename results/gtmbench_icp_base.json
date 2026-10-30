@@ -1,0 +1,306 @@
+{
+  "name": "base",
+  "adapter": null,
+  "n_tasks": 24,
+  "n_judged": 24,
+  "mean_overall": 1.5347222222222223,
+  "means": {
+    "icp_alignment": 1.5833333333333333,
+    "buyer_account_specificity": 1.25,
+    "commercial_relevance": 1.0,
+    "gtm_actionability": 1.0416666666666667,
+    "concision": 1.875,
+    "offer_separation": 2.4583333333333335
+  },
+  "source": "GTM-Bench ICP judge rubric (pearlengine/GTM.Bench), tasks fetched at run time",
+  "per_task": [
+    {
+      "task_id": "Q001",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q006",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 1,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q012",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q017",
+      "vertical": "Events, Hospitality & Media",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q022",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 1
+      }
+    },
+    {
+      "task_id": "Q028",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 1
+      }
+    },
+    {
+      "task_id": "Q035",
+      "vertical": "Recruiting & Talent",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q041",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 2,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q044",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 4
+      }
+    },
+    {
+      "task_id": "Q049",
+      "vertical": "Events, Hospitality & Media",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 1,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q056",
+      "vertical": "Sustainability & Energy",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q061",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 1
+      }
+    },
+    {
+      "task_id": "Q069",
+      "vertical": "Public Sector",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q073",
+      "vertical": "Sustainability & Energy",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 4
+      }
+    },
+    {
+      "task_id": "Q077",
+      "vertical": "Local & Field Services",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q082",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 4
+      }
+    },
+    {
+      "task_id": "Q088",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 1,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q093",
+      "vertical": "Recruiting & Talent",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q098",
+      "vertical": "Financial Services & Insurance",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q105",
+      "vertical": "Sustainability & Energy",
+      "scores": {
+        "icp_alignment": 1,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 1
+      }
+    },
+    {
+      "task_id": "Q110",
+      "vertical": "Cybersecurity & IT",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 2
+      }
+    },
+    {
+      "task_id": "Q114",
+      "vertical": "Ecommerce, Retail & CPG",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 2,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q119",
+      "vertical": "Events, Hospitality & Media",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    },
+    {
+      "task_id": "Q126",
+      "vertical": "Healthcare & Wellness",
+      "scores": {
+        "icp_alignment": 2,
+        "buyer_account_specificity": 1,
+        "commercial_relevance": 1,
+        "gtm_actionability": 1,
+        "concision": 2,
+        "offer_separation": 3
+      }
+    }
+  ]
+}

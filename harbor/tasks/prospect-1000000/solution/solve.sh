@@ -1,0 +1,4 @@
+#!/bin/bash
+cat > /app/action.json <<'JSON'
+{"icp_check": {"industry_match": true, "size_match": false, "region_match": false, "buyer_match": false, "red_flag": false}, "decision": "disqualify", "tier": "C", "channel": "email", "subject": "", "message": ""}
+JSON

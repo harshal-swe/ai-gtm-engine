@@ -1,0 +1,30 @@
+schema_version = "1.4"
+artifacts = []
+
+[task]
+name = "gtmgym/prospect-1000006"
+version = "1.0.0"
+description = "GTM Gym: qualify one B2B prospect and draft a first-touch message"
+authors = []
+keywords = ["gtm", "sales", "simulation"]
+
+[metadata]
+
+[verifier]
+timeout_sec = 120.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 300.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 300.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]
