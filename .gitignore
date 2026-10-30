@@ -8,3 +8,4 @@ results/*.jsonl
 results/dash/
 results/costs.json
 harbor/jobs/
+agent_config.yaml

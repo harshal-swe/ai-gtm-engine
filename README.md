@@ -55,3 +55,8 @@ not trained for. Not a leaderboard entry.
 How we got there: run 1 improved messages but never disqualified a lead; run 2 added the ICP check and swung between
 pursuing everyone and disqualifying most leads (`results/val_ckpt*.json`), because skipping a good lead cost only −0.2.
 Run 3 raised that penalty to −1.0 and continued from run 2's step-20 checkpoint for 25 steps. Total Tenki spend: about $0.35.
+
+**Band integration:** `gtm_sim/band_agent.py` puts the trained policy in a [Band](https://www.band.ai/) room. Mention it
+(`@gtm-gym prospect 1000004`), and it posts its decision, draft and the simulated buyer's verdict, then waits for a human
+to reply `approve` or `reject`. Put the agent's `agent_id`/`api_key` from app.band.ai in a gitignored `agent_config.yaml`
+under `gtm_gym:`, then run `.venv/bin/python -m gtm_sim.band_agent`.
