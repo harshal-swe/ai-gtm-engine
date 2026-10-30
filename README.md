@@ -60,3 +60,4 @@ Run 3 raised that penalty to −1.0 and continued from run 2's step-20 checkpoin
 (`@gtm-gym prospect 1000004`), and it posts its decision, draft and the simulated buyer's verdict, then waits for a human
 to reply `approve` or `reject`. Put the agent's `agent_id`/`api_key` from app.band.ai in a gitignored `agent_config.yaml`
 under `gtm_gym:`, then run `.venv/bin/python -m gtm_sim.band_agent`.
+No Band account yet? `.venv/bin/python -m gtm_sim.band_demo` runs the same agent in a local mock of a Band room.

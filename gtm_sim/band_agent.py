@@ -54,7 +54,8 @@ class GTMGymAdapter(SimpleAdapter):
             with LOG.open("a") as f:
                 f.write(json.dumps({**item, "human": msg.sender_name, "verdict": decision.group(1).lower(),
                                     "at": time.time()}) + "\n")
-            await self._send(tools, f"Logged: {decision.group(1).lower()}d prospect {item['seed']}. "
+            past = {"approve": "approved", "reject": "rejected"}[decision.group(1).lower()]
+            await self._send(tools, f"Logged: {past} prospect {item['seed']}. "
                                     "Nothing was sent to a real person.", reply_to)
             return
 
