@@ -63,7 +63,7 @@ class GTMGymAdapter(SimpleAdapter):
         seed = int(m.group(1)) if m else self.next_seed
         self.next_seed = seed + 1
         ep = env.make_episode(seed)
-        completion = generate(self.model, self.tok, [ep], batch_size=1)[0]
+        completion = generate(self.model, self.tok, [ep], batch_size=1, verbose=False)[0]
         action = env.parse_action(completion) or {}
         o = env.score(ep, completion)
         pr = ep.prospect

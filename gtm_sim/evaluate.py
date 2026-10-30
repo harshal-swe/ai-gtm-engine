@@ -36,7 +36,7 @@ def load_policy(adapter: str | None):
 
 
 @torch.no_grad()
-def generate(model, tok, episodes, batch_size: int = 16, max_new_tokens: int = 320) -> list[str]:
+def generate(model, tok, episodes, batch_size: int = 16, max_new_tokens: int = 320, verbose: bool = True) -> list[str]:
     outs = []
     for i in range(0, len(episodes), batch_size):
         batch = episodes[i:i + batch_size]
@@ -46,7 +46,8 @@ def generate(model, tok, episodes, batch_size: int = 16, max_new_tokens: int = 3
         gen = model.generate(**enc, max_new_tokens=max_new_tokens, do_sample=False,
                              pad_token_id=tok.pad_token_id)
         outs += tok.batch_decode(gen[:, enc["input_ids"].shape[1]:], skip_special_tokens=True)
-        print(f"  generated {min(i + batch_size, len(episodes))}/{len(episodes)}", flush=True)
+        if verbose:
+            print(f"  generated {min(i + batch_size, len(episodes))}/{len(episodes)}", flush=True)
     return outs
 
 
