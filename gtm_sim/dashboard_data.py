@@ -134,6 +134,8 @@ def main():
          "done" if harbor_stats(TRAINED) else "in progress"),
         ("GTM-Bench ICP step: transfer check on real seller prompts", "done" if gtmbench(TRAINED) else "in progress"),
         ("Results slide for the RelayGTM deck", "done"),
+        ("Band agent: mention @gtm-gym in a room, a human approves or rejects the draft (built; needs Band login to go live)",
+         "in progress"),
     ]
     (OUT / "plan.json").write_text(json.dumps([{"item": i, "state": st} for i, st in plan], indent=1))
 

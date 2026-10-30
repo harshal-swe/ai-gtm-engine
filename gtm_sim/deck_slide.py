@@ -85,6 +85,47 @@ def delta(a, b, fmt, better_up=True):
     return s, (GOOD if good else BAD) if d else MUTED
 
 
+def sponsors_xml(page: str, cost: float) -> str:
+    """The "Built with" slide: sponsor cards for Tenki and Band, then a row of open-source credits."""
+    shapes = [
+        text_box(0.7, 0.5, 12.0, 0.4, ["BUILT WITH"], size=1400, color=INDIGO, bold=True),
+        text_box(0.7, 1.0, 12.0, 0.95, ["Thanks to the tools that made it possible."], size=3200, color=WHITE, bold=True),
+    ]
+    for x, name, desc in [
+        (0.7, "Tenki", f"Every training reward was scored in Tenki sandboxes, and the Harbor benchmark gave each "
+                       f"prospect its own Tenki VM: 303 sandboxes for ${cost:.2f}."),
+        (6.8, "Band", "We built the trained agent as a Band agent: mention @gtm-gym in a room, it drafts the "
+                      "outreach, and a person approves or rejects it."),
+    ]:
+        shapes += [card(x, 2.05, 5.85, 2.1),
+                   text_box(x + 0.3, 2.3, 5.3, 0.7, [name], size=4000, color=WHITE, bold=True),
+                   text_box(x + 0.3, 3.15, 5.3, 1.2, [desc], size=1600, color=BODY)]
+    shapes.append(text_box(0.7, 4.6, 6.0, 0.3, ["ALSO BUILT ON"], size=1200, color=MUTED, bold=True))
+    x, y = 0.7, 5.0
+    for name in ["Qwen3", "Hugging Face TRL", "PEFT", "PyTorch", "Harbor", "GTM-Bench by Blackpearl", "Claude"]:
+        w = 0.45 + 0.09 * len(name)
+        if x + w > 12.65:
+            x, y = 0.7, y + 0.65
+        shapes += [card(x, y, w, 0.5), text_box(x, y, w, 0.5, [name], size=1400, color=WHITE, bold=True,
+                                                align="ctr", anchor="ctr")]
+        x += w + 0.18
+    shapes += [text_box(0.7, 7.05, 8.0, 0.3, ["RelayGTM  •  Demo build — fictional data only, no real outreach sent"],
+                        size=1100, color=MUTED),
+               text_box(12.13, 7.05, 0.5, 0.3, [page], size=1100, color=MUTED, align="r")]
+    return slide_xml(shapes)
+
+
+def slide_xml(shapes) -> str:
+    return ('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+            '<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" '
+            'xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+            'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+            f'<p:cSld><p:bg><p:bgPr><a:solidFill><a:srgbClr val="{NAVY}"/></a:solidFill><a:effectLst/></p:bgPr></p:bg>'
+            '<p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr/>'
+            + "".join(shapes) +
+            '</p:spTree></p:cSld><p:clrMapOvr><a:masterClrMapping/></p:clrMapOvr></p:sld>')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("out")
@@ -93,7 +134,12 @@ def main():
     ap.add_argument("--gtmbench-trained", default="grpo-run3")
     ap.add_argument("--cost", type=float, required=True, help="total Tenki spend in USD")
     ap.add_argument("--page", default="6")
+    ap.add_argument("--sponsors", action="store_true", help="write the Built with slide instead")
     args = ap.parse_args()
+    if args.sponsors:
+        pathlib.Path(args.out).write_text(sponsors_xml(args.page, args.cost))
+        print(f"wrote {args.out}: sponsors slide")
+        return
 
     b = json.loads(pathlib.Path("results/baseline.json").read_text())
     t = json.loads(pathlib.Path(f"results/{args.trained}.json").read_text())
